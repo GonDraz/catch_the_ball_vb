@@ -126,5 +126,32 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\basket.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
