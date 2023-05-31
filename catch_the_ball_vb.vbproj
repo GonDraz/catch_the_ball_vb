@@ -79,6 +79,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -86,10 +87,35 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GameOver.Designer.vb">
+      <DependentUpon>GameOver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameOver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamePlay.Designer.vb">
+      <DependentUpon>GamePlay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GamePlay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore.Designer.vb">
+      <DependentUpon>HighScore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HighScore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.vb">
+      <DependentUpon>MenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,6 +131,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamePlay.resx">
+      <DependentUpon>GamePlay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScore.resx">
+      <DependentUpon>HighScore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

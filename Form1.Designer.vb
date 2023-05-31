@@ -23,40 +23,29 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TimerSpam = New System.Windows.Forms.Timer(Me.components)
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.imgLogo = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnPlay = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.TimerMove = New System.Windows.Forms.Timer(Me.components)
-        Me.lblScore = New System.Windows.Forms.Label()
-        Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pnlGameOver = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnReplay = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnMenu = New Guna.UI2.WinForms.Guna2Button()
+        Me.pnlMain = New System.Windows.Forms.Panel()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlMenu.SuspendLayout()
-        Me.pnlGameOver.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TimerSpam
+        'Guna2DragControl1
         '
-        Me.TimerSpam.Interval = 700
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.TargetControl = Me.Guna2Panel1
+        Me.Guna2DragControl1.UseTransparentDrag = True
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.Guna2Panel1.Controls.Add(Me.Guna2ControlBox1)
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1280, 24)
-        Me.Guna2Panel1.TabIndex = 0
+        Me.Guna2Panel1.TabIndex = 7
         '
         'Guna2ControlBox1
         '
@@ -68,165 +57,38 @@ Partial Class Form1
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(24, 24)
         Me.Guna2ControlBox1.TabIndex = 0
         '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.TargetControl = Me.Guna2Panel1
-        Me.Guna2DragControl1.UseTransparentDrag = True
-        '
-        'imgLogo
-        '
-        Me.imgLogo.BackColor = System.Drawing.Color.Transparent
-        Me.imgLogo.FillColor = System.Drawing.Color.Transparent
-        Me.imgLogo.Image = Global.catch_the_ball_vb.My.Resources.Resources.logo
-        Me.imgLogo.ImageRotate = 0!
-        Me.imgLogo.Location = New System.Drawing.Point(391, 30)
-        Me.imgLogo.Name = "imgLogo"
-        Me.imgLogo.Size = New System.Drawing.Size(517, 199)
-        Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgLogo.TabIndex = 1
-        Me.imgLogo.TabStop = False
-        '
-        'btnPlay
-        '
-        Me.btnPlay.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPlay.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnPlay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnPlay.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnPlay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnPlay.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnPlay.ForeColor = System.Drawing.Color.White
-        Me.btnPlay.Location = New System.Drawing.Point(556, 411)
-        Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(180, 45)
-        Me.btnPlay.TabIndex = 2
-        Me.btnPlay.Text = "Play"
-        '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.BorderRadius = 24
+        Me.Guna2Elipse1.TargetControl = Me
         '
-        'TimerMove
+        'pnlMain
         '
-        Me.TimerMove.Interval = 30
-        '
-        'lblScore
-        '
-        Me.lblScore.AutoSize = True
-        Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScore.Location = New System.Drawing.Point(51, 48)
-        Me.lblScore.Name = "lblScore"
-        Me.lblScore.Size = New System.Drawing.Size(145, 37)
-        Me.lblScore.TabIndex = 3
-        Me.lblScore.Text = "Score : 0"
-        '
-        'pnlMenu
-        '
-        Me.pnlMenu.BackgroundImage = Global.catch_the_ball_vb.My.Resources.Resources.background
-        Me.pnlMenu.Controls.Add(Me.imgLogo)
-        Me.pnlMenu.Controls.Add(Me.btnPlay)
-        Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlMenu.Location = New System.Drawing.Point(0, 24)
-        Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(1280, 696)
-        Me.pnlMenu.TabIndex = 4
-        '
-        'pnlGameOver
-        '
-        Me.pnlGameOver.BackgroundImage = Global.catch_the_ball_vb.My.Resources.Resources.background
-        Me.pnlGameOver.Controls.Add(Me.Guna2PictureBox1)
-        Me.pnlGameOver.Controls.Add(Me.btnReplay)
-        Me.pnlGameOver.Controls.Add(Me.btnMenu)
-        Me.pnlGameOver.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlGameOver.Location = New System.Drawing.Point(0, 24)
-        Me.pnlGameOver.Name = "pnlGameOver"
-        Me.pnlGameOver.Size = New System.Drawing.Size(1280, 696)
-        Me.pnlGameOver.TabIndex = 5
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.catch_the_ball_vb.My.Resources.Resources.logo
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(391, 30)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(517, 199)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
-        '
-        'btnReplay
-        '
-        Me.btnReplay.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnReplay.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnReplay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnReplay.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReplay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReplay.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnReplay.ForeColor = System.Drawing.Color.White
-        Me.btnReplay.Location = New System.Drawing.Point(556, 360)
-        Me.btnReplay.Name = "btnReplay"
-        Me.btnReplay.Size = New System.Drawing.Size(180, 45)
-        Me.btnReplay.TabIndex = 2
-        Me.btnReplay.Text = "Replay"
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnMenu.ForeColor = System.Drawing.Color.White
-        Me.btnMenu.Location = New System.Drawing.Point(556, 422)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(180, 45)
-        Me.btnMenu.TabIndex = 3
-        Me.btnMenu.Text = "Menu"
+        Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlMain.Location = New System.Drawing.Point(0, 0)
+        Me.pnlMain.Name = "pnlMain"
+        Me.pnlMain.Size = New System.Drawing.Size(1280, 720)
+        Me.pnlMain.TabIndex = 8
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1280, 720)
-        Me.Controls.Add(Me.pnlGameOver)
-        Me.Controls.Add(Me.pnlMenu)
-        Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.pnlMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlMenu.ResumeLayout(False)
-        Me.pnlGameOver.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TimerSpam As Timer
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents btnPlay As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents imgLogo As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents TimerMove As Timer
-    Friend WithEvents lblScore As Label
-    Friend WithEvents pnlMenu As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents pnlGameOver As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents btnReplay As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnMenu As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents pnlMain As Panel
 End Class
