@@ -26,7 +26,7 @@ Public Class GamePlay
 
         score = 0
 
-        lblScore.Text = "Score : " & score.ToString()
+        lblScore.Text = "Điểm : " & score.ToString()
 
         pnlPause.Visible = False
 
@@ -62,7 +62,7 @@ Public Class GamePlay
 
             If item.Bounds.IntersectsWith(basket.Bounds) Then
                 score += 1
-                lblScore.Text = "Score : " & score.ToString()
+                lblScore.Text = "Điểm : " & score.ToString()
                 speedMove *= 0.98
                 speedSpam *= 0.98
                 If speedSpam <= 300 Then
@@ -77,7 +77,7 @@ Public Class GamePlay
 
             If item.Top >= Me.ClientSize.Height Then
                 EndGame()
-                GameOver.lbScore.Text = "Score Của Bạn là : " & score.ToString()
+                GameOver.lbScore.Text = "Điểm Của Bạn là : " & score.ToString()
                 Form1.SwitchForm(GameOver)
                 Exit For
             End If
@@ -107,7 +107,12 @@ Public Class GamePlay
         pnlPause.Visible = True
     End Sub
 
-    Private Sub btnResume_Click(sender As Object, e As EventArgs) Handles btnResume.Click
+
+    Private Sub pnlPause_Paint(sender As Object, e As PaintEventArgs) Handles pnlPause.Paint
+
+    End Sub
+
+    Private Sub btnResume_Click_1(sender As Object, e As EventArgs) Handles btnResume.Click
         TimerSpam.Start()
         TimerMove.Start()
 
@@ -116,7 +121,7 @@ Public Class GamePlay
         btnPause.Visible = True
     End Sub
 
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+    Private Sub btnHome_Click_1(sender As Object, e As EventArgs) Handles btnHome.Click
         EndGame()
         Form1.SwitchForm(MenuForm)
     End Sub
