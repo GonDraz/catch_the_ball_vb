@@ -3,9 +3,8 @@
 
 
 Public Class Form1
-    Private speedMove As Double = 5
     Private speedSpam As Double = 700
-
+    Private speedMove As Double = 20
 
     Private basket As PictureBox
     Private score As Integer = 0
@@ -21,15 +20,15 @@ Public Class Form1
         basket.Location = New Point((Me.ClientSize.Width - basket.Width) / 2, Me.ClientSize.Height - basket.Height - 10)
         Me.Controls.Add(basket)
         Me.DoubleBuffered = True
+
+        pnlGameOver.Visible = False
+        pnlMenu.Visible = True
+
     End Sub
 
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
-        TimerSpam.Interval = Convert.ToInt32(speedSpam)
-        TimerSpam.Start()
-        TimerMove.Start()
-
-        imgLogo.Visible = False
-        btnPlay.Visible = False
+        StartGame()
+        pnlMenu.Visible = False
     End Sub
 
     Private Sub TimerSpam_Tick(sender As Object, e As EventArgs) Handles TimerSpam.Tick
@@ -57,17 +56,19 @@ Public Class Form1
     Private Sub TimerMove_Tick(sender As Object, e As EventArgs) Handles TimerMove.Tick
 
         For Each item As PictureBox In ball
-            item.Top += Convert.ToInt32(speedMove)
+            item.Top += 10
 
             If item.Bounds.IntersectsWith(basket.Bounds) Then
                 score += 1
                 lblScore.Text = "Score : " & score.ToString()
-                speedMove *= 1.05
+                speedMove *= 0.98
                 speedSpam *= 0.98
                 If speedSpam <= 300 Then
                     speedSpam = 300
                 End If
                 TimerSpam.Interval = Convert.ToInt32(speedSpam)
+                TimerMove.Interval = Convert.ToInt32(speedMove)
+                Debug.Print(speedMove)
                 Me.Controls.Remove(item)
                 ball.Remove(item)
                 Exit For
@@ -84,17 +85,34 @@ Public Class Form1
     Private Sub EndGame()
         TimerSpam.Stop()
         TimerMove.Stop()
-        speedMove = 5
         speedSpam = 700
+        speedMove = 20
 
-
+        score = 0
         imgLogo.Visible = True
         btnPlay.Visible = True
         For Each item As PictureBox In ball
             Me.Controls.Remove(item)
         Next
         ball.Clear()
+
+        pnlGameOver.Visible = True
     End Sub
 
+    Private Sub btnReplay_Click(sender As Object, e As EventArgs) Handles btnReplay.Click
+        StartGame()
+        pnlGameOver.Visible = False
+    End Sub
 
+    Private Sub StartGame()
+        TimerSpam.Interval = Convert.ToInt32(speedSpam)
+        TimerMove.Interval = Convert.ToInt32(speedMove)
+        TimerSpam.Start()
+        TimerMove.Start()
+    End Sub
+
+    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
+        pnlGameOver.Visible = False
+        pnlMenu.Visible = True
+    End Sub
 End Class
