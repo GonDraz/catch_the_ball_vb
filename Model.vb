@@ -34,15 +34,13 @@ Public Class Model
             End Try
         End If
 
-
         connection.Close()
-
-
 
     End Sub
 
 
     Public Sub SaveData(name As String, score As Integer)
+        connection.Open()
 
         Debug.Print("name : " & name)
         Debug.Print("score : " & score)
@@ -50,16 +48,15 @@ Public Class Model
         Try
             Dim con As New SQLiteConnection(connString)
             Dim cmd As New SQLiteCommand
-            con.Open()
             cmd.Connection = con
             cmd.CommandText = "insert into player(name,score) values (@name,@score)"
             cmd.Parameters.AddWithValue("@name", name)
             cmd.Parameters.AddWithValue("@score", score)
             cmd.ExecuteNonQuery()
-            con.Close()
         Catch ex As Exception
             MsgBox(Err.Description)
         End Try
+        connection.Close()
     End Sub
 
 End Class
