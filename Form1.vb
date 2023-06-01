@@ -1,6 +1,5 @@
 ﻿
 Public Class Form1
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SwitchForm(MenuForm)
     End Sub
@@ -18,9 +17,5 @@ Public Class Form1
         form.TopLevel = False
         pnlMain.Controls.Add(form)
         form.Show()
-    End Sub
-
-    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
-        Quit()
     End Sub
 End Class

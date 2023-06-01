@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "catch_the_ball_vb", "catch_the_ball_vb.vbproj", "{076F13D1-5C32-4A39-A6CF-DE40A1339809}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupGame", "..\SetupGame\SetupGame.vdproj", "{9CD83BE7-9E7C-4B05-A5D5-02A05FB4482A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup Catch The Ball", "..\Setup Catch The Ball\Setup Catch The Ball.vdproj", "{6BE471AF-E761-4F66-9C7B-E572F1439623}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{076F13D1-5C32-4A39-A6CF-DE40A1339809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{076F13D1-5C32-4A39-A6CF-DE40A1339809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076F13D1-5C32-4A39-A6CF-DE40A1339809}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CD83BE7-9E7C-4B05-A5D5-02A05FB4482A}.Debug|Any CPU.ActiveCfg = Debug
-		{9CD83BE7-9E7C-4B05-A5D5-02A05FB4482A}.Release|Any CPU.ActiveCfg = Release
+		{6BE471AF-E761-4F66-9C7B-E572F1439623}.Debug|Any CPU.ActiveCfg = Debug
+		{6BE471AF-E761-4F66-9C7B-E572F1439623}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
