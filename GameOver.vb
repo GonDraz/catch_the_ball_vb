@@ -1,13 +1,18 @@
 ﻿Public Class GameOver
 
-
+    Private md As New Model
 
 
     Private Sub btnSave_Click_1(sender As Object, e As EventArgs) Handles btnSave.Click
-        Debug.Print("name : " & tbPlayer.Text)
-        Debug.Print("GamePlay.score: " & GamePlay.score.ToString)
+        If tbPlayer.Text = "" Then
+            MsgBox("vui lòng điền đầy đủ thông tin k thì ăn đấm")
+        Else
+            md.Load()
 
-        'save file
+            md.SaveData(tbPlayer.Text, GamePlay.score)
+            Form1.SwitchForm(MenuForm)
+        End If
+
     End Sub
 
     Private Sub btnReplay_Click_1(sender As Object, e As EventArgs) Handles btnReplay.Click
