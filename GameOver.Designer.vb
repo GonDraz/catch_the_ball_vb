@@ -36,11 +36,11 @@ Partial Class GameOver
         Me.lbScore.AutoSize = True
         Me.lbScore.BackColor = System.Drawing.Color.Transparent
         Me.lbScore.Font = New System.Drawing.Font("FS Angry Birds Movie", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbScore.Location = New System.Drawing.Point(461, 302)
+        Me.lbScore.Location = New System.Drawing.Point(478, 302)
         Me.lbScore.Name = "lbScore"
-        Me.lbScore.Size = New System.Drawing.Size(293, 52)
+        Me.lbScore.Size = New System.Drawing.Size(324, 52)
         Me.lbScore.TabIndex = 4
-        Me.lbScore.Text = "Điểm Của Bạn là :"
+        Me.lbScore.Text = "ĐIỂM CỦA BẠN LÀ :"
         '
         'tbPlayer
         '
@@ -53,7 +53,7 @@ Partial Class GameOver
         Me.tbPlayer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbPlayer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbPlayer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbPlayer.Location = New System.Drawing.Point(487, 409)
+        Me.tbPlayer.Location = New System.Drawing.Point(488, 409)
         Me.tbPlayer.Name = "tbPlayer"
         Me.tbPlayer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbPlayer.PlaceholderText = ""

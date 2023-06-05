@@ -26,6 +26,7 @@ Partial Class MenuForm
         Me.btnPlay = New Guna.UI2.WinForms.Guna2Button()
         Me.btnHighScore = New Guna.UI2.WinForms.Guna2Button()
         Me.btnQuit = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSetting = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class MenuForm
         Me.btnPlay.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnPlay.HoverState.CustomBorderColor = System.Drawing.Color.Black
         Me.btnPlay.HoverState.FillColor = System.Drawing.Color.Gray
-        Me.btnPlay.Location = New System.Drawing.Point(545, 419)
+        Me.btnPlay.Location = New System.Drawing.Point(545, 327)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(190, 69)
         Me.btnPlay.TabIndex = 15
@@ -114,12 +115,37 @@ Partial Class MenuForm
         Me.btnQuit.TabIndex = 17
         Me.btnQuit.Text = "THOÁT"
         '
+        'btnSetting
+        '
+        Me.btnSetting.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSetting.AutoRoundedCorners = True
+        Me.btnSetting.BackColor = System.Drawing.Color.Transparent
+        Me.btnSetting.BorderRadius = 33
+        Me.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSetting.FillColor = System.Drawing.Color.Black
+        Me.btnSetting.Font = New System.Drawing.Font("FS Angry Birds Movie", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSetting.ForeColor = System.Drawing.Color.White
+        Me.btnSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnSetting.HoverState.CustomBorderColor = System.Drawing.Color.Black
+        Me.btnSetting.HoverState.FillColor = System.Drawing.Color.Gray
+        Me.btnSetting.Location = New System.Drawing.Point(545, 424)
+        Me.btnSetting.Name = "btnSetting"
+        Me.btnSetting.Size = New System.Drawing.Size(190, 69)
+        Me.btnSetting.TabIndex = 18
+        Me.btnSetting.Text = "CÀI ĐẶT"
+        '
         'MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.catch_the_ball_vb.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.btnSetting)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.btnHighScore)
         Me.Controls.Add(Me.btnPlay)
@@ -135,4 +161,5 @@ Partial Class MenuForm
     Friend WithEvents btnPlay As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnHighScore As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnQuit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSetting As Guna.UI2.WinForms.Guna2Button
 End Class
