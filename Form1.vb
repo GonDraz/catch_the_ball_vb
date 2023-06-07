@@ -10,17 +10,17 @@ Public Class Form1
 
     Dim playerPathfile As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\catch_the_ball_data.json"
     Dim content As String = "{""player"":[]}"
-    Dim music As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
+
 
     Dim json As String
 
     Dim model As Model
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Debug.Print("playerPathfile" & playerPathfile)
         LoadData()
         SwitchForm(MenuForm)
-        music.PlayLooping()
+        Setting.backgoundSound.PlayLooping()
+
 
     End Sub
 

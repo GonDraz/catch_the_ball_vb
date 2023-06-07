@@ -192,7 +192,7 @@
       <DependentUpon>MenuForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -252,6 +252,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sounds\background_muisc.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sounds\game_over.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sounds\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\sounds\save_sound.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

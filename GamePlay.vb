@@ -11,8 +11,7 @@ Public Class GamePlay
     Private ball As New List(Of PictureBox)()
 
     Public Sub Game_Load()
-
-
+        Setting.backgoundSound.Stop()
 
         basket = New PictureBox()
         basket.Image = My.Resources.basket
@@ -66,8 +65,7 @@ Public Class GamePlay
             item.Top += 10
 
             If item.Bounds.IntersectsWith(basket.Bounds) Then
-                Dim music_in_game As New SoundPlayer("E:\correct-2-46134.wav") 'Đường dẫn tới file nhạc của bạn.
-                music_in_game.Play()
+                Setting.hitSound.Play()
                 score += 1
                 lblScore.Text = "Điểm : " & score.ToString()
                 speedMove *= 0.98
@@ -89,16 +87,17 @@ Public Class GamePlay
 
 
             If item.Top >= Me.ClientSize.Height Then
-                Dim music_out_game As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
-                music_out_game.Play()
+                My.Computer.Audio.Play(My.Resources.hit, AudioPlayMode.Background)
 
                 EndGame()
+
 
                 GameOver.lbScore.Text = "Điểm Của Bạn là : " & score.ToString()
                 Form1.SwitchForm(GameOver)
 
+                Setting.gameOverSound.PlaySync()
+                Setting.backgoundSound.PlayLooping()
                 Exit For
-
             End If
         Next
     End Sub
@@ -120,8 +119,6 @@ Public Class GamePlay
 
 
     Private Sub btnPause_Click(sender As Object, e As EventArgs) Handles btnPause.Click
-        Dim music_out_game As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
-        music_out_game.Play()
         TimerSpam.Stop()
         TimerMove.Stop()
 
@@ -133,8 +130,6 @@ Public Class GamePlay
 
 
     Private Sub btnResume_Click_1(sender As Object, e As EventArgs) Handles btnResume.Click
-        Dim music As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
-        music.Stop()
         TimerSpam.Start()
         TimerMove.Start()
 
