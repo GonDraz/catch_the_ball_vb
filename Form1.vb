@@ -2,6 +2,7 @@
 Imports System.Environment
 Imports System.IO
 Imports System.Json
+Imports System.Media
 Imports Newtonsoft.Json
 
 
@@ -9,6 +10,7 @@ Public Class Form1
 
     Dim playerPathfile As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\catch_the_ball_data.json"
     Dim content As String = "{""player"":[]}"
+    Dim music As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
 
     Dim json As String
 
@@ -18,6 +20,7 @@ Public Class Form1
         Debug.Print("playerPathfile" & playerPathfile)
         LoadData()
         SwitchForm(MenuForm)
+        music.PlayLooping()
 
     End Sub
 
@@ -72,10 +75,15 @@ Public Class Form1
     End Sub
 
     Public Sub Quit()
+        MenuForm.Close()
         GamePlay.Close()
         GameOver.Close()
         HighScore.Close()
-        MenuForm.Close()
+        Setting.Close()
+
+
+
+
         Me.Close()
     End Sub
 
@@ -84,5 +92,9 @@ Public Class Form1
         form.TopLevel = False
         pnlMain.Controls.Add(form)
         form.Show()
+    End Sub
+
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+
     End Sub
 End Class

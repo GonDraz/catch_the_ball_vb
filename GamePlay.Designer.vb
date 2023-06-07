@@ -28,8 +28,8 @@ Partial Class GamePlay
         Me.TimerSpam = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMove = New System.Windows.Forms.Timer(Me.components)
         Me.pnlPause = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnResume = New Guna.UI2.WinForms.Guna2Button()
         Me.btnHome = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnResume = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlPause.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Partial Class GamePlay
         Me.btnPause.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnPause.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnPause.FillColor = System.Drawing.Color.Black
-        Me.btnPause.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
+        Me.btnPause.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnPause.ForeColor = System.Drawing.Color.White
         Me.btnPause.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnPause.HoverState.CustomBorderColor = System.Drawing.Color.Black
@@ -59,10 +59,10 @@ Partial Class GamePlay
         'lblScore
         '
         Me.lblScore.AutoSize = True
-        Me.lblScore.Font = New System.Drawing.Font("FS Angry Birds Movie", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScore.Location = New System.Drawing.Point(36, 41)
         Me.lblScore.Name = "lblScore"
-        Me.lblScore.Size = New System.Drawing.Size(138, 52)
+        Me.lblScore.Size = New System.Drawing.Size(136, 37)
         Me.lblScore.TabIndex = 10
         Me.lblScore.Text = "Điểm : 0"
         '
@@ -84,29 +84,6 @@ Partial Class GamePlay
         Me.pnlPause.Size = New System.Drawing.Size(700, 400)
         Me.pnlPause.TabIndex = 11
         '
-        'btnResume
-        '
-        Me.btnResume.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnResume.AutoRoundedCorners = True
-        Me.btnResume.BorderRadius = 20
-        Me.btnResume.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnResume.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnResume.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnResume.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnResume.FillColor = System.Drawing.Color.Black
-        Me.btnResume.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
-        Me.btnResume.ForeColor = System.Drawing.Color.White
-        Me.btnResume.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.btnResume.HoverState.CustomBorderColor = System.Drawing.Color.Black
-        Me.btnResume.HoverState.FillColor = System.Drawing.Color.Gray
-        Me.btnResume.Location = New System.Drawing.Point(286, 163)
-        Me.btnResume.Name = "btnResume"
-        Me.btnResume.Size = New System.Drawing.Size(127, 42)
-        Me.btnResume.TabIndex = 12
-        Me.btnResume.Text = "TIẾP TỤC"
-        '
         'btnHome
         '
         Me.btnHome.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -119,7 +96,7 @@ Partial Class GamePlay
         Me.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnHome.FillColor = System.Drawing.Color.Black
-        Me.btnHome.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
+        Me.btnHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.Black
@@ -129,6 +106,29 @@ Partial Class GamePlay
         Me.btnHome.Size = New System.Drawing.Size(156, 42)
         Me.btnHome.TabIndex = 13
         Me.btnHome.Text = "màn hình chính"
+        '
+        'btnResume
+        '
+        Me.btnResume.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnResume.AutoRoundedCorners = True
+        Me.btnResume.BorderRadius = 20
+        Me.btnResume.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnResume.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnResume.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnResume.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnResume.FillColor = System.Drawing.Color.Black
+        Me.btnResume.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnResume.ForeColor = System.Drawing.Color.White
+        Me.btnResume.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnResume.HoverState.CustomBorderColor = System.Drawing.Color.Black
+        Me.btnResume.HoverState.FillColor = System.Drawing.Color.Gray
+        Me.btnResume.Location = New System.Drawing.Point(286, 163)
+        Me.btnResume.Name = "btnResume"
+        Me.btnResume.Size = New System.Drawing.Size(127, 42)
+        Me.btnResume.TabIndex = 12
+        Me.btnResume.Text = "TIẾP TỤC"
         '
         'GamePlay
         '

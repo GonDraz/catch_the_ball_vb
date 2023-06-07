@@ -35,10 +35,10 @@ Partial Class GameOver
         '
         Me.lbScore.AutoSize = True
         Me.lbScore.BackColor = System.Drawing.Color.Transparent
-        Me.lbScore.Font = New System.Drawing.Font("FS Angry Birds Movie", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbScore.Location = New System.Drawing.Point(478, 302)
         Me.lbScore.Name = "lbScore"
-        Me.lbScore.Size = New System.Drawing.Size(324, 52)
+        Me.lbScore.Size = New System.Drawing.Size(315, 37)
         Me.lbScore.TabIndex = 4
         Me.lbScore.Text = "ĐIỂM CỦA BẠN LÀ :"
         '
@@ -74,7 +74,7 @@ Partial Class GameOver
         Me.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnSave.FillColor = System.Drawing.Color.Black
-        Me.btnSave.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnSave.HoverState.CustomBorderColor = System.Drawing.Color.Black
@@ -98,7 +98,7 @@ Partial Class GameOver
         Me.btnReplay.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnReplay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnReplay.FillColor = System.Drawing.Color.Black
-        Me.btnReplay.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
+        Me.btnReplay.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnReplay.ForeColor = System.Drawing.Color.White
         Me.btnReplay.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnReplay.HoverState.CustomBorderColor = System.Drawing.Color.Black
@@ -122,7 +122,7 @@ Partial Class GameOver
         Me.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnMenu.FillColor = System.Drawing.Color.Black
-        Me.btnMenu.Font = New System.Drawing.Font("FS Angry Birds Movie", 11.25!)
+        Me.btnMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.btnMenu.ForeColor = System.Drawing.Color.White
         Me.btnMenu.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnMenu.HoverState.CustomBorderColor = System.Drawing.Color.Black

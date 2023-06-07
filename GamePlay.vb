@@ -1,4 +1,5 @@
-﻿Imports Guna.UI2.WinForms
+﻿Imports System.Media
+Imports Guna.UI2.WinForms
 
 Public Class GamePlay
     Private speedSpam As Double = 700
@@ -10,6 +11,9 @@ Public Class GamePlay
     Private ball As New List(Of PictureBox)()
 
     Public Sub Game_Load()
+
+
+
         basket = New PictureBox()
         basket.Image = My.Resources.basket
         basket.SizeMode = PictureBoxSizeMode.StretchImage
@@ -58,9 +62,12 @@ Public Class GamePlay
     Private Sub TimerMove_Tick(sender As Object, e As EventArgs) Handles TimerMove.Tick
 
         For Each item As PictureBox In ball
+
             item.Top += 10
 
             If item.Bounds.IntersectsWith(basket.Bounds) Then
+                Dim music_in_game As New SoundPlayer("E:\correct-2-46134.wav") 'Đường dẫn tới file nhạc của bạn.
+                music_in_game.Play()
                 score += 1
                 lblScore.Text = "Điểm : " & score.ToString()
                 speedMove *= 0.98
@@ -80,11 +87,18 @@ Public Class GamePlay
                 Exit For
             End If
 
+
             If item.Top >= Me.ClientSize.Height Then
+                Dim music_out_game As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
+                music_out_game.Play()
+
                 EndGame()
+
                 GameOver.lbScore.Text = "Điểm Của Bạn là : " & score.ToString()
                 Form1.SwitchForm(GameOver)
+
                 Exit For
+
             End If
         Next
     End Sub
@@ -96,14 +110,18 @@ Public Class GamePlay
         speedMove = 20
 
         For Each item As PictureBox In ball
+
             Me.Controls.Remove(item)
         Next
         ball.Clear()
         Me.Controls.Remove(basket)
+
     End Sub
 
 
     Private Sub btnPause_Click(sender As Object, e As EventArgs) Handles btnPause.Click
+        Dim music_out_game As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
+        music_out_game.Play()
         TimerSpam.Stop()
         TimerMove.Stop()
 
@@ -113,11 +131,10 @@ Public Class GamePlay
     End Sub
 
 
-    Private Sub pnlPause_Paint(sender As Object, e As PaintEventArgs) Handles pnlPause.Paint
-
-    End Sub
 
     Private Sub btnResume_Click_1(sender As Object, e As EventArgs) Handles btnResume.Click
+        Dim music As New SoundPlayer("E:\deviation-130965.wav") 'Đường dẫn tới file nhạc của bạn.
+        music.Stop()
         TimerSpam.Start()
         TimerMove.Start()
 
@@ -129,5 +146,9 @@ Public Class GamePlay
     Private Sub btnHome_Click_1(sender As Object, e As EventArgs) Handles btnHome.Click
         EndGame()
         Form1.SwitchForm(MenuForm)
+    End Sub
+
+    Private Sub pnlPause_Paint(sender As Object, e As PaintEventArgs) Handles pnlPause.Paint
+
     End Sub
 End Class
