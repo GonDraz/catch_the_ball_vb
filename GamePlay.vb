@@ -65,9 +65,14 @@ Public Class GamePlay
                 lblScore.Text = "Điểm : " & score.ToString()
                 speedMove *= 0.98
                 speedSpam *= 0.98
+
+                If speedMove <= 1 Then
+                    speedMove = 1
+                End If
                 If speedSpam <= 300 Then
                     speedSpam = 300
                 End If
+
                 TimerSpam.Interval = Convert.ToInt32(speedSpam)
                 TimerMove.Interval = Convert.ToInt32(speedMove)
                 Me.Controls.Remove(item)

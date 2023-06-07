@@ -46,11 +46,26 @@ Public Class Form1
 
 
     Public Sub SaveData(name As String, score As Integer)
-        Dim newPlayer As New Player
-        newPlayer.Name = name
-        newPlayer.Score = score
 
-        model.Player.Add(newPlayer)
+        Dim check As Boolean = True
+
+        For Each p As Player In model.Player
+            If p.Name = name Then
+                If p.Score < score Then
+                    p.Score = score
+                    check = False
+                End If
+            End If
+        Next
+
+
+        If check Then
+            Dim newPlayer As New Player
+            newPlayer.Name = name
+            newPlayer.Score = score
+
+            model.Player.Add(newPlayer)
+        End If
 
         json = JsonConvert.SerializeObject(model)
         My.Computer.FileSystem.WriteAllText(playerPathfile, json, False)
