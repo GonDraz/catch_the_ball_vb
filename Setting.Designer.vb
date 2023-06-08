@@ -26,9 +26,10 @@ Partial Class Setting
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.imgLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnBackToMenu = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnBatTat = New System.Windows.Forms.Button()
-        Me.btnTang = New System.Windows.Forms.Button()
-        Me.btnGiam = New System.Windows.Forms.Button()
+        Me.btnOnOff = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnTurnUp = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnTurnDown = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,32 +74,86 @@ Partial Class Setting
         Me.btnBackToMenu.TabIndex = 16
         Me.btnBackToMenu.Text = "MÀN HÌNH CHÍNH"
         '
-        'btnBatTat
+        'btnOnOff
         '
-        Me.btnBatTat.Location = New System.Drawing.Point(496, 323)
-        Me.btnBatTat.Name = "btnBatTat"
-        Me.btnBatTat.Size = New System.Drawing.Size(75, 23)
-        Me.btnBatTat.TabIndex = 17
-        Me.btnBatTat.Text = "Bật Tắt Âm"
-        Me.btnBatTat.UseVisualStyleBackColor = True
+        Me.btnOnOff.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnOnOff.AutoRoundedCorners = True
+        Me.btnOnOff.BorderRadius = 11
+        Me.btnOnOff.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnOnOff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnOnOff.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnOnOff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnOnOff.FillColor = System.Drawing.Color.Black
+        Me.btnOnOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnOnOff.ForeColor = System.Drawing.Color.White
+        Me.btnOnOff.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOnOff.HoverState.CustomBorderColor = System.Drawing.Color.Black
+        Me.btnOnOff.HoverState.FillColor = System.Drawing.Color.Gray
+        Me.btnOnOff.Location = New System.Drawing.Point(656, 377)
+        Me.btnOnOff.Name = "btnOnOff"
+        Me.btnOnOff.Size = New System.Drawing.Size(54, 25)
+        Me.btnOnOff.TabIndex = 22
+        Me.btnOnOff.Text = "Bật Tắt"
         '
-        'btnTang
+        'btnTurnUp
         '
-        Me.btnTang.Location = New System.Drawing.Point(496, 374)
-        Me.btnTang.Name = "btnTang"
-        Me.btnTang.Size = New System.Drawing.Size(75, 23)
-        Me.btnTang.TabIndex = 20
-        Me.btnTang.Text = "Tăng Âm"
-        Me.btnTang.UseVisualStyleBackColor = True
+        Me.btnTurnUp.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTurnUp.AutoRoundedCorners = True
+        Me.btnTurnUp.BorderRadius = 11
+        Me.btnTurnUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTurnUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTurnUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTurnUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTurnUp.FillColor = System.Drawing.Color.Black
+        Me.btnTurnUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnTurnUp.ForeColor = System.Drawing.Color.White
+        Me.btnTurnUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnTurnUp.HoverState.CustomBorderColor = System.Drawing.Color.Black
+        Me.btnTurnUp.HoverState.FillColor = System.Drawing.Color.Gray
+        Me.btnTurnUp.Location = New System.Drawing.Point(665, 346)
+        Me.btnTurnUp.Name = "btnTurnUp"
+        Me.btnTurnUp.Size = New System.Drawing.Size(36, 25)
+        Me.btnTurnUp.TabIndex = 23
+        Me.btnTurnUp.Text = "+"
         '
-        'btnGiam
+        'btnTurnDown
         '
-        Me.btnGiam.Location = New System.Drawing.Point(496, 430)
-        Me.btnGiam.Name = "btnGiam"
-        Me.btnGiam.Size = New System.Drawing.Size(75, 23)
-        Me.btnGiam.TabIndex = 21
-        Me.btnGiam.Text = "Giảm Âm"
-        Me.btnGiam.UseVisualStyleBackColor = True
+        Me.btnTurnDown.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTurnDown.AutoRoundedCorners = True
+        Me.btnTurnDown.BorderRadius = 11
+        Me.btnTurnDown.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTurnDown.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTurnDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTurnDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTurnDown.FillColor = System.Drawing.Color.Black
+        Me.btnTurnDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnTurnDown.ForeColor = System.Drawing.Color.White
+        Me.btnTurnDown.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnTurnDown.HoverState.CustomBorderColor = System.Drawing.Color.Black
+        Me.btnTurnDown.HoverState.FillColor = System.Drawing.Color.Gray
+        Me.btnTurnDown.Location = New System.Drawing.Point(665, 408)
+        Me.btnTurnDown.Name = "btnTurnDown"
+        Me.btnTurnDown.Size = New System.Drawing.Size(36, 25)
+        Me.btnTurnDown.TabIndex = 24
+        Me.btnTurnDown.Text = "-"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(406, 368)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(222, 46)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Âm thanh :"
         '
         'Setting
         '
@@ -106,9 +161,10 @@ Partial Class Setting
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.catch_the_ball_vb.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1280, 720)
-        Me.Controls.Add(Me.btnGiam)
-        Me.Controls.Add(Me.btnTang)
-        Me.Controls.Add(Me.btnBatTat)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnTurnDown)
+        Me.Controls.Add(Me.btnTurnUp)
+        Me.Controls.Add(Me.btnOnOff)
         Me.Controls.Add(Me.btnBackToMenu)
         Me.Controls.Add(Me.imgLogo)
         Me.ForeColor = System.Drawing.Color.Transparent
@@ -124,7 +180,8 @@ Partial Class Setting
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents imgLogo As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents btnBackToMenu As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnTang As Button
-    Friend WithEvents btnBatTat As Button
-    Friend WithEvents btnGiam As Button
+    Friend WithEvents btnTurnDown As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnTurnUp As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnOnOff As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label1 As Label
 End Class

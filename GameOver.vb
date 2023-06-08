@@ -7,7 +7,9 @@
 
             Form1.SaveData(tbPlayer.Text, GamePlay.score)
             Form1.SwitchForm(MenuForm)
+            Setting.saveSound.PlaySync()
             MsgBox("Đã Lưu thông tin!")
+            Setting.backgoundSound.PlayLooping()
         End If
     End Sub
 

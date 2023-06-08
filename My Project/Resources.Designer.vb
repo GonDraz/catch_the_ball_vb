@@ -112,9 +112,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Public ReadOnly Property game_over() As System.IO.UnmanagedMemoryStream
+        Public ReadOnly Property game_over_sound() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("game_over", resourceCulture)
+                Return ResourceManager.GetStream("game_over_sound", resourceCulture)
             End Get
         End Property
         

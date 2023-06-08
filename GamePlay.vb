@@ -74,8 +74,8 @@ Public Class GamePlay
                 If speedMove <= 1 Then
                     speedMove = 1
                 End If
-                If speedSpam <= 300 Then
-                    speedSpam = 300
+                If speedSpam <= 1 Then
+                    speedSpam = 1
                 End If
 
                 TimerSpam.Interval = Convert.ToInt32(speedSpam)

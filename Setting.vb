@@ -13,7 +13,7 @@ Public Class Setting
 
     Public backgoundSound As New SoundPlayer(My.Resources.background_muisc)
     Public hitSound As New SoundPlayer(My.Resources.hit)
-    Public gameOverSound As New SoundPlayer(My.Resources.game_over)
+    Public gameOverSound As New SoundPlayer(My.Resources.game_over_sound)
     Public saveSound As New SoundPlayer(My.Resources.save_sound)
 
 
@@ -29,18 +29,15 @@ Public Class Setting
 
     End Sub
 
-    Private Sub btnBatTat_Click(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btnBatTat.Click
-        SendMessageW(Me.Handle, WM_APPCOMAND, Me.Handle, New IntPtr(APPCOMMAND_VOLUME_MUTE))
-    End Sub
-
-
-    Private Sub btnTang_Click(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btnTang.Click
+    Private Sub btnTurnUp_Click(sender As Object, e As EventArgs) Handles btnTurnUp.Click
         SendMessageW(Me.Handle, WM_APPCOMAND, Me.Handle, New IntPtr(APPCOMNAND_VOLUME_UP))
     End Sub
 
-    Private Sub btnGiam_Click(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles btnGiam.Click
-        SendMessageW(Me.Handle, WM_APPCOMAND, Me.Handle, New IntPtr(APPCOMMAND_VOLUME_DOWN))
-
+    Private Sub btnOnOff_Click(sender As Object, e As EventArgs) Handles btnOnOff.Click
+        SendMessageW(Me.Handle, WM_APPCOMAND, Me.Handle, New IntPtr(APPCOMMAND_VOLUME_MUTE))
     End Sub
 
+    Private Sub btnTurnDown_Click(sender As Object, e As EventArgs) Handles btnTurnDown.Click
+        SendMessageW(Me.Handle, WM_APPCOMAND, Me.Handle, New IntPtr(APPCOMMAND_VOLUME_DOWN))
+    End Sub
 End Class

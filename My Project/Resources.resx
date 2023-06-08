@@ -154,13 +154,13 @@
   <data name="background_muisc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sounds\background_muisc.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="game_over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\sounds\game_over.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sounds\hit.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="save_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sounds\save_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="game_over_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\sounds\game_over_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
