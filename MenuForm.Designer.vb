@@ -27,6 +27,10 @@ Partial Class MenuForm
         Me.btnHighScore = New Guna.UI2.WinForms.Guna2Button()
         Me.btnQuit = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSetting = New Guna.UI2.WinForms.Guna2Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,12 +143,68 @@ Partial Class MenuForm
         Me.btnSetting.TabIndex = 18
         Me.btnSetting.Text = "CÀI ĐẶT"
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel1.Location = New System.Drawing.Point(1128, 497)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(147, 24)
+        Me.LinkLabel1.TabIndex = 19
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Vũ Ngọc Hải Hà"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel2.Location = New System.Drawing.Point(1128, 531)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(150, 24)
+        Me.LinkLabel2.TabIndex = 20
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Dương Hải Đăng"
+        '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.LinkLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel3.Location = New System.Drawing.Point(1128, 566)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(156, 24)
+        Me.LinkLabel3.TabIndex = 21
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Nguyễn Anh Đức"
+        '
+        'LinkLabel4
+        '
+        Me.LinkLabel4.AutoSize = True
+        Me.LinkLabel4.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.LinkLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel4.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabel4.Location = New System.Drawing.Point(1128, 599)
+        Me.LinkLabel4.Name = "LinkLabel4"
+        Me.LinkLabel4.Size = New System.Drawing.Size(134, 24)
+        Me.LinkLabel4.TabIndex = 22
+        Me.LinkLabel4.TabStop = True
+        Me.LinkLabel4.Text = "Lê Thanh Bình"
+        '
         'MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.catch_the_ball_vb.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.LinkLabel4)
+        Me.Controls.Add(Me.LinkLabel3)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.btnSetting)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.btnHighScore)
@@ -155,6 +215,7 @@ Partial Class MenuForm
         Me.Text = "MenuForm"
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents imgLogo As Guna.UI2.WinForms.Guna2PictureBox
@@ -162,4 +223,8 @@ Partial Class MenuForm
     Friend WithEvents btnHighScore As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnQuit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSetting As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents LinkLabel4 As LinkLabel
 End Class
